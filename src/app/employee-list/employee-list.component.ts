@@ -19,7 +19,9 @@ export class EmployeeListComponent {
 
   }
   empClick(employee: any) {
-    this.route.navigate(['/employee', employee.id])
+    // this.route.navigate(['/employee/'+ employee.id, employee.name]);
+    this.route.navigate(['/employee', employee.id, employee.name]);
+    // this.route.navigate(['/employee', employee.id])
   }
 
 }

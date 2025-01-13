@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'employee', component: EmployeeListComponent },
-  { path: 'employee/:id', component: EmployeeDetailsComponent },
+  { path: 'employee/:id/:name', component: EmployeeDetailsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
