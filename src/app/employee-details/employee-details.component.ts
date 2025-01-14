@@ -22,7 +22,7 @@ export class EmployeeDetailsComponent {
       this.empId = id;
     })
   }
-  nextEmp() {
+  nextMap() {
     let nextId = parseInt(this.empId) + 1;
     this.router.navigate(['/employee/', nextId])
   }
