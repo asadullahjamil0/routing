@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
-import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router'
 
 @Component({
   selector: 'app-employee-details',
@@ -10,24 +9,26 @@ import { Router } from '@angular/router';
 export class EmployeeDetailsComponent {
   public empId: any;
   public empName: any;
-  constructor(private route: ActivatedRoute, private rout: Router) {
+  constructor(private route: ActivatedRoute, private router: Router) {
 
   }
 
 
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('id');
-    let name = this.route.snapshot.paramMap.get('name');
-    this.empId = id;
-    this.empName = name;
+    // let id = this.route.snapshot.paramMap.get('id');
+    // this.empId = id;
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      let id = params.get('id');
+      this.empId = id;
+    })
   }
   nextEmp() {
     let nextId = parseInt(this.empId) + 1;
-    this.rout.navigate(['/employee/', nextId,this.empName])
+    this.router.navigate(['/employee/', nextId])
   }
   previuosEmp() {
     let prevId = parseInt(this.empId) - 1;
-    this.router.navigate(['/employee/', prevId,this.empName])
+    this.router.navigate(['/employee/', prevId])
   }
 
 }
