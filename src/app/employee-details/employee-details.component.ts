@@ -31,4 +31,9 @@ export class EmployeeDetailsComponent {
     this.router.navigate(['/employee/', prevId])
   }
 
+  gotToEmp() {
+    let selectedId = this.empId;
+    this.router.navigate(['/employee', { id: selectedId }])
+  }
+
 }
