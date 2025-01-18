@@ -9,6 +9,9 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { ProductsComponent } from './products/products.component';
+import { TshirtsComponent } from './tshirts/tshirts.component';
+import { TrousersComponent } from './trousers/trousers.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     ContactComponent,
     PageNotFoundComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    ProductsComponent,
+    TshirtsComponent,
+    TrousersComponent
   ],
   imports: [
     BrowserModule,
